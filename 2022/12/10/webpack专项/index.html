@@ -147,6 +147,14 @@ replay-btn" aria-hidden="true"></i></a>
 <p>2、clean-webpack-plugin // 每次打包时候清空上次打包结果</p>
 <p>3、copy-webpack-plugin // 执行拷贝操作</p>
 <p>4、mini-css-extract-plugin // 提取css文件</p>
+<p>14、webpack优化方法有哪些？</p>
+<ol>
+<li>使用 source map：在打包时启用 source map 可以帮助你调试代码，但会增加文件大小，所以发布时应该禁用。</li>
+<li>使用 webpack 的优化插件：webpack 本身提供了很多优化插件，例如 UglifyJSPlugin 插件可以帮助你压缩 JavaScript 代码，OptimizeCssAssetsPlugin 插件可以帮助你压缩 CSS。</li>
+<li>开启 tree shaking：tree shaking 是一种优化打包体积的方法，它可以消除未使用的代码。在使用 tree shaking 时，你需要使用 ES2015 模块系统（也就是 import 和 export 语句），并且在配置文件中设置 optimization.usedExports 为 true。</li>
+<li>使用代码分割：代码分割是指将你的代码分成多个文件，然后在运行时动态加载文件。这样可以让你的应用启动更快，因为浏览器只需要加载必要的文件即可。</li>
+<li>开启生产环境模式：在生产环境模式下，webpack 会自动启用一些优化措施，例如压缩代码和启用 tree shaking。你可以在配置文件中通过设置 mode 属性为 ‘production’ 来开启生产环境模式。</li>
+</ol>
 
   </div>
   

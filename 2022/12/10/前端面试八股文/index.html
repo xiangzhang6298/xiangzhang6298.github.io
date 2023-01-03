@@ -158,6 +158,48 @@ replay-btn" aria-hidden="true"></i></a>
 <p>\1. 可以修改url，但不会引起刷新，从而在不刷新的页面的情况下跳转路由。</p>
 <p>\2. 监听url改变，根据url渲染对应组件。</p>
 <p>当用户在浏览器中访问 URL 时，Vue Router 会查找与当前 URL 匹配的路由规则，并显示对应的组件。如果没有匹配的路由规则，则显示一个 404 页面。</p>
+<p>18、block、inline和inline-block的元素有什么差别？</p>
+<p>在HTML和CSS中，有三种不同的元素类型：块级元素、内联元素和内联块级元素。这三种元素的区别在于它们的显示方式和布局。</p>
+<p>块级元素：默认情况下，块级元素占满它所在的容器的宽度。块级元素会在它前面的元素之下换行显示。可以使用宽度、高度、内边距和外边距来调整块级元素的布局。</p>
+<p>内联元素：内联元素只占据它包含的文本的宽度，不会占满它所在容器的宽度。内联元素会和它前面的元素在同一行显示。不能使用宽度和高度来调整内联元素的布局，但可以使用内边距和外边距。</p>
+<p>内联块级元素：内联块级元素和内联元素类似，只占据它包含的文本的宽度，不会占满它所在容器的宽度。内联元素会和它前面的元素在同一行显示。可以使用宽度、高度、内边距和外边距来调整块级元素的布局。</p>
+<p>19、HTML中元素的布局上下文什么意思？</p>
+<p>元素的布局上下文是指HTML中一个元素的布局方式，包括元素的尺寸、位置、浮动和重叠。HTML中有两种元素的布局上下文：BFC（块级上下文）和IFC（内联上下文）。</p>
+<p>区别：水平排列和垂直排列，浮动元素会/不会影响其他元素，设置了浮动的元素不会/会发生重叠。</p>
+<p>20、怎么形成BFC和IFC？overflow除了hidden还有哪个值可以触发BFC？position除了absolute还有哪个值可以触发？</p>
+<p>BFC：块级元素，浮动元素，positon：absolute或fixed，display属性是inline-block、table-cell、table-caption，overflow属性不是visible的块级元素也属于BFC。</p>
+<p>IFC：内联元素，display：inline</p>
+<p>21、margin塌陷和BFC？</p>
+<p>margin塌陷是指两个或多个块级元素垂直方向的margin会发生重叠。</p>
+<p>22、css如何水平居中和垂直居中？那种最好？</p>
+<p>一般两种：1、display：flex，水平居中justify-content，垂直居中align-items。2、可以使用绝对定位+负边距的方式来实现内容的居中对齐。</p>
+<p>23、说一下CSS优先级的计算规则？</p>
+<ol>
+<li>优先级最高的是内联样式（inline style），即HTML元素内部的style属性。</li>
+<li>其次是内部样式表（internal style sheet），即HTML文档内部的style标签。</li>
+<li>接着是外部样式表（external style sheet），即HTML文档外部的CSS文件。</li>
+<li>最后是浏览器默认样式。</li>
+</ol>
+<p>23、介绍一下都有哪些CSS选择器？</p>
+<p>基本选择器：*，标签选择器，类选择器，id选择器</p>
+<p>属性选择器：选择具有特定属性的元素</p>
+<p>伪类选择器：用于选择文档中的特定元素。</p>
+<p>24、介绍下css的盒模型？</p>
+<p>ie（怪异）盒模型，w3c（标准）盒模型</p>
+<p>W3C标准盒模型：属性width，height只包含内容content，不包含border和padding。</p>
+<p>IE盒模型：属性width，height包含content、border和padding，指的是content +padding+border。</p>
+<p>25、什么是MVVM？与MVC有什么区别？</p>
+<p>MVVM 是 Model-View-ViewModel 的缩写，是一种软件架构模式。</p>
+<p>MVVM 模式中，ViewModel 负责处理界面逻辑，与 Model 进行交互，并将结果更新到 View 上。View 通过双向数据绑定来更新 ViewModel，而 ViewModel 则通过事件来更新 Model。</p>
+<p>26、vue父子组件如何通信？兄弟组件如何通信？如何使用eventBus通信？</p>
+<ol>
+<li>父子组件通信：父组件可以通过 props 向子组件传递数据，子组件可以通过事件向父组件发送消息。</li>
+<li>兄弟组件通信：兄弟组件之间可以通过父组件或者 eventBus 进行通信。</li>
+<li>使用 eventBus 进行通信：eventBus 是一个自定义的事件总线，它可以让任意两个组件进行通信。eventBus 通常用于跨组件层级的通信，例如不同页面之间的通信。</li>
+</ol>
+<p>27、讲一下vue的keep-alive组件，什么时候会用到？</p>
+<p>Vue 的 keep-alive 组件可以将组件实例缓存在内存中，避免重复渲染。这对于那些需要频繁切换，但又不希望频繁重新渲染的组件很有用。</p>
+<p>28、讲一下vue数据双向绑定原理，依赖收集的过程，vue2数据绑定缺点是什么？vue3是怎么解决的？</p>
 
   </div>
   
